@@ -1,9 +1,18 @@
+import { useState } from "react";
 import Button from "./Button";
+import Modal from "./Modal";
+import Backdrop from "./Backdrop";
 
 function Todo({ title, description }) {
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
   //nested function
   function deleteHandler() {
-    alert("Edit");
+    setModalIsOpen(true);
+  }
+
+  function closeModal() {
+    setModalIsOpen(false);
   }
 
   return (
@@ -17,6 +26,12 @@ function Todo({ title, description }) {
           Delete
         </Button>
       </div>
+      {modalIsOpen && (
+        <>
+          <Modal closeModal={closeModal} />
+          <Backdrop closeModal={closeModal} />
+        </>
+      )}
     </div>
   );
 }
