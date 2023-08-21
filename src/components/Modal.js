@@ -1,12 +1,14 @@
 import Button from "./Button";
 
-function Modal() {
+function Modal(props) {
   return (
     <div className="modal">
       <p>are you sure?</p>
       <div className="flex justify-center space-x-2">
-        <Button variant="outline">Cancel</Button>
-        <Button>Confirm</Button>
+        <button variant="outline" onClick={props.closeModal}>
+          Cancel
+        </button>
+        <button onClick={props.closeModal}>Confirm</button>
       </div>
     </div>
   );

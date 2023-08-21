@@ -12,8 +12,6 @@ function App() {
         <Todo title={"clean house"} />
         <Todo title={"learn react"} />
         <Todo title={"do next.js"} />
-        <Modal />
-        <Backdrop />
       </div>
     </div>
   );
