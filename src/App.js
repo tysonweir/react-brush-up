@@ -10,9 +10,9 @@ function App() {
     <div>
       <MainNav />
       <Routes>
-        <Route path={Navigation.home} element={<Home />} />
-        <Route path={Navigation.about} element={<Favorites />} />
-        <Route path={Navigation.new} element={<NewPage />} />
+        <Route path={Navigation.home.route} element={<Home />} />
+        <Route path={Navigation.about.route} element={<Favorites />} />
+        <Route path={Navigation.new.route} element={<NewPage />} />
       </Routes>
     </div>
   );
