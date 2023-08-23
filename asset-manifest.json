@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/react-brush-up/static/css/main.dee1f703.css",
+    "main.js": "/react-brush-up/static/js/main.a3e390c8.js",
+    "static/media/logo.png": "/react-brush-up/static/media/logo.3b9695ed44b2205fa781.png",
+    "index.html": "/react-brush-up/index.html",
+    "main.dee1f703.css.map": "/react-brush-up/static/css/main.dee1f703.css.map",
+    "main.a3e390c8.js.map": "/react-brush-up/static/js/main.a3e390c8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dee1f703.css",
+    "static/js/main.a3e390c8.js"
+  ]
+}
