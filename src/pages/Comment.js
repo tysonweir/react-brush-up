@@ -1,4 +1,4 @@
-import Comments from "../components/Comments";
+import CommentPanel from "../components/CommentPanel";
 import { useNavigate } from "react-router-dom";
 import { Navigation } from "../data/Navigation";
 
@@ -16,15 +16,14 @@ function Comment() {
         },
       }
     ).then((response) => {
-      // console.log(response);
       history(Navigation.home.route, { replace: true });
     });
   }
 
   return (
-    <div className="flex flex-col justify-center items-center min-h-screen bg-white">
+    <div className="flex flex-col justify-center items-center min-h-screen">
       <h1 className="mb-2">Leave the man a comment</h1>
-      <Comments onAddComment={addCommentHandler} />
+      <CommentPanel onAddComment={addCommentHandler} />
     </div>
   );
 }

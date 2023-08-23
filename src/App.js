@@ -7,7 +7,7 @@ import { Navigation } from "./data/Navigation";
 
 function App() {
   return (
-    <div>
+    <div className="bg-gradient-to-r from-gray-900 min-h-screen overflow-hidden overscroll-y-none">
       <MainNav />
       <Routes>
         <Route path={Navigation.home.route} element={<Home />} />

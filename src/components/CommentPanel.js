@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import Card from "./Card";
 
-function Comments(props) {
+function CommentPanel(props) {
   const commentInputRef = useRef();
   const imageInputRef = useRef();
   const [isFriends, setIsFriends] = useState(false);
@@ -34,10 +34,10 @@ function Comments(props) {
             id="comment"
             required
             ref={commentInputRef}
-            className="block w-full p-4 border border-gray-300 rounded-lg bg-gray-50 sm:text-md focus:ring-blue-500 focus:border-blue-500"
+            className="block w-full p-4 border border-gray-300 rounded-lg bg-gray-50 sm:text-md focus:ring-blue-300 focus:border-blue-300"
           />
         </div>
-        <div className="form-control">
+        <div>
           <label htmlFor="image" className="block mb-2 text-sm font-medium">
             Image
           </label>
@@ -46,25 +46,22 @@ function Comments(props) {
             id="image"
             required
             ref={imageInputRef}
-            className="block w-full p-4 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-md focus:ring-blue-500 focus:border-blue-500"
+            className="block w-full p-4 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-md focus:ring-blue-300 peer-focus:border-blue-300"
           />
         </div>
-        <div className="form-control">
-          <label class="relative inline-flex items-center mr-5 cursor-pointer">
+        <div className="mt-4">
+          <label className="relative inline-flex items-center mr-5 cursor-pointer">
             <input
               type="checkbox"
               value=""
-              class="sr-only peer"
-              isFriends
+              className="sr-only peer"
               onChange={() => setIsFriends(!isFriends)}
             />
-            <div class="w-11 h-6 bg-gray-200 rounded-full peer dark:bg-gray-700 peer-focus:ring-4 peer-focus:ring-purple-300 dark:peer-focus:ring-purple-800 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-purple-600"></div>
-            <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">
-              Friends
-            </span>
+            <div className="w-11 h-6 bg-gray-400 rounded-full peer peer-focus:ring-4 peer-focus:ring-blue-300  peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all  peer-checked:bg-gray-600"></div>
+            <span className="ml-3 text-sm font-medium">Friends</span>
           </label>
         </div>
-        <div className="mt-3 text-right">
+        <div className="text-right">
           <button type="submit">Submit</button>
         </div>
       </form>
@@ -72,4 +69,4 @@ function Comments(props) {
   );
 }
 
-export default Comments;
+export default CommentPanel;
