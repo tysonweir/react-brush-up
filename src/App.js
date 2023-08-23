@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
-import Favorites from "./pages/About";
-import NewPage from "./pages/NewPage";
+import Comment from "./pages/Comment";
+import Comments from "./pages/Comments";
 import MainNav from "./components/layout/MainNav";
 import { Navigation } from "./data/Navigation";
 
@@ -11,8 +11,8 @@ function App() {
       <MainNav />
       <Routes>
         <Route path={Navigation.home.route} element={<Home />} />
-        <Route path={Navigation.about.route} element={<Favorites />} />
-        <Route path={Navigation.new.route} element={<NewPage />} />
+        <Route path={Navigation.comment.route} element={<Comment />} />
+        <Route path={Navigation.comments.route} element={<Comments />} />
       </Routes>
     </div>
   );

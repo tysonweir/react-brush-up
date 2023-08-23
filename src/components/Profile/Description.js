@@ -1,6 +1,3 @@
-import { Link } from "react-router-dom";
-import { Navigation } from "../../data/Navigation";
-
 function Description({ description }) {
   return (
     <div className="mt-10 py-10 border-t border-blueGray-200 text-center">
@@ -12,9 +9,7 @@ function Description({ description }) {
           <p className="mb-4 text-lg leading-relaxed text-blueGray-700">
             {description}
           </p>
-          <Link to={Navigation.about} className="font-normal text-blue-700">
-            Show more
-          </Link>
+          <span className="font-normal text-blue-700">Show more</span>
         </div>
       </div>
     </div>
