@@ -1,5 +1,5 @@
 export const Navigation = {
   home: { route: "/", label: "Home" },
-  about: { route: "/about", label: "About" },
-  new: { route: "/new", label: "New Page" },
+  comment: { route: "/comment", label: "Comment" },
+  comments: { route: "/comments", label: "Comments" },
 };

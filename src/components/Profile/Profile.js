@@ -2,23 +2,31 @@ import Image from "./Image";
 import Person from "./Person";
 import Description from "./Description";
 import Skills from "./Skills";
+import Tracker from "./Tracker";
 
-function Profile({ data }) {
-  return data ? (
-    data.map((temp) => (
-      <section key={temp.id} className="pt-16 bg-blueGray-50">
-        <div className="w-full lg:w-4/12 px-4 mx-auto">
+function Profile({ profileData, totalComments, totalFriends }) {
+  return profileData ? (
+    profileData.map((data) => (
+      <section
+        key={data.id}
+        className="pt-16 transition-all duration-[200ms] ease-in-out"
+      >
+        <div className="w-full lg:w-6/12 px-4 mx-auto">
           <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg mt-16">
             <div className="px-6">
-              <Image image={temp.image} />
+              <Image image={data.image} />
               <Person
-                name={temp.name}
-                location={temp.location}
-                profession={temp.profession}
-                education={temp.education}
+                name={data.name}
+                location={data.location}
+                profession={data.profession}
+                education={data.education}
               />
-              <Description description={temp.description} />
-              <Skills skills={temp.skills} />
+              <Tracker
+                totalComments={totalComments}
+                totalFriends={totalFriends}
+              />
+              <Description description={data.description} />
+              <Skills skills={data.skills} />
             </div>
           </div>
         </div>
