@@ -4,7 +4,6 @@ import Profile from "../components/Profile/Profile";
 function Home() {
   const [profileData, setProfileData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [loadedComments, setLoadedComments] = useState([]);
   const [totalComments, setTotalComments] = useState(0);
   const [totalFriends, setTotalFriends] = useState(0);
 
@@ -54,7 +53,6 @@ function Home() {
         });
 
         setIsLoading(false);
-        setLoadedComments(comments);
       });
   }, []);
 

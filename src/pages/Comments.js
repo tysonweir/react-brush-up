@@ -1,6 +1,4 @@
 import { useState, useEffect } from "react";
-import Card from "../components/Card";
-import ShowFullText from "../components/ShowFullText";
 
 function Comments() {
   const [isLoading, setIsLoading] = useState(true);
